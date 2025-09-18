@@ -1,4 +1,17 @@
-Host github.com
+Host github.com-personal
+  HostName github.com
+  User git
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+
+{{ if eq .context "work" -}}
+Host github.com
+  HostName github.com
+  User git
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519_work
+  IdentitiesOnly yes
+{{ end }}
