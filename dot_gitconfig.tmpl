@@ -1,0 +1,31 @@
+[user]
+  name = Giorgio Vilardo
+  email = {{ .email }}
+{{ if eq .chezmoi.os "darwin" -}}
+[credential]
+  helper = osxkeychain
+{{ end -}}
+[init]
+  defaultBranch = main
+[rebase]
+  autosquash = true
+[alias]
+  fixup = "!git log -n 50 --pretty=format:'%h - %an - %s' --no-merges | fzf | cut -c 1-7 | xargs -o git commit --fixup"
+  sm = "!git commit --amend --no-edit && git push --force-with-lease"
+[push]
+  autosetupRemote = true
+[core]
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+  dark = true
+  side-by-side = true
+  line-numbers = true
+[merge]
+  conflictStyle = zdiff3
+{{ if eq .context "work" -}}
+[includeIf "hasconfig:remote.*.url:git@github.com:{{ .work_github_org_name }}/**"]
+  path = ~/.gitconfig-work
+{{ end }}

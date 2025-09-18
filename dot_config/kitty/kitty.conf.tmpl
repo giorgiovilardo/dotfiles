@@ -1,0 +1,31 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+font_family      family="Giorgio Mono"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+
+font_size 22.0
+
+confirm_os_window_close 0
+
+symbol_map U+e000-U+e00a,U+ea60-U+ebeb,U+e0a0-U+e0c8,U+e0ca,U+e0cc-U+e0d7,U+e200-U+e2a9,U+e300-U+e3e3,U+e5fa-U+e6b7,U+e700-U+e8ef,U+ed00-U+efc1,U+f000-U+f2ff,U+f000-U+f2e0,U+f300-U+f381,U+f400-U+f533,U+f0001-U+f1af0 Symbols Nerd Font Mono
+
+tab_bar_edge top
+tab_bar_style powerline
+tab_bar_min_tabs 1
+tab_activity_symbol "• "
+tab_bar_background #444
+
+scrollback_lines 10000
+
+visual_bell_duration 0.0
+visual_bell_color none
+enable_audio_bell no
+bell_on_tab "🔔 "
+
+{{ if eq .chezmoi.os "darwin" -}}
+macos_option_as_alt left
+{{- end }}
+
+window_padding_width 10
