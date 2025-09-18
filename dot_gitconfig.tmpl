@@ -1,10 +1,12 @@
 [user]
   name = Giorgio Vilardo
   email = {{ .email }}
-{{ if eq .chezmoi.os "darwin" -}}
+
+{{- if eq .chezmoi.os "darwin" }}
 [credential]
   helper = osxkeychain
 {{ end -}}
+
 [init]
   defaultBranch = main
 [rebase]
@@ -25,7 +27,8 @@
   line-numbers = true
 [merge]
   conflictStyle = zdiff3
-{{ if eq .context "work" -}}
+
+{{- if eq .context "work" }}
 [includeIf "hasconfig:remote.*.url:git@github.com:{{ .work_github_org_name }}/**"]
   path = ~/.gitconfig-work
-{{ end }}
+{{- end -}}
