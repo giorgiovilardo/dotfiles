@@ -29,6 +29,6 @@
   conflictStyle = zdiff3
 
 {{- if eq .context "work" }}
-[includeIf "hasconfig:remote.*.url:git@github.com:{{ .work_github_org_name }}/**"]
+[includeIf "hasconfig:remote.*.url:git@github.com-work:{{ .work_github_org_name }}/**"]
   path = ~/.gitconfig-work
 {{- end -}}
