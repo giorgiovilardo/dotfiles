@@ -10,4 +10,4 @@ autoload -Uz compinit
 compinit
 
 # Added by Toolbox App
-# export PATH="$PATH:/Users/giorgio/Library/Application Support/JetBrains/Toolbox/scripts"
+export PATH="$PATH:/Users/giorgio/Library/Application Support/JetBrains/Toolbox/scripts"
