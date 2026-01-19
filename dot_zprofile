@@ -6,8 +6,5 @@ setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt EXTENDED_HISTORY
 
-autoload -Uz compinit
-compinit
-
 # Added by Toolbox App
 export PATH="$PATH:/Users/giorgio/Library/Application Support/JetBrains/Toolbox/scripts"
